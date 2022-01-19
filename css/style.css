@@ -1,0 +1,188 @@
+/**
+ * Box model
+ */
+
+.outer-container {
+    height: 300px;
+    background-color: wheat;
+
+
+    /**
+     * Padding
+     *
+     * Controls the spacing inside of an element
+     */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    /* A short-hand for padding, 4 values for all sides */
+    padding: 20px 20px 20px 20px; /* top right bottom left */
+    
+    /* A short-hand for padding, 2 values for all sides */
+    padding: 20px 20px; /* top/bottom left/right */
+
+    /* A short-hand for padding, 1 value for all sides */
+    padding: 20px; /* top/bottom/left/right */
+
+
+    /**
+     * Margin
+     *
+     * Controls the spacing outside of an element
+     */
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    /* A short-hand for margin, 4 values for all sides */
+    margin: 20px 20px 20px 20px; /* top right bottom left */
+    
+    /* A short-hand for margin, 2 values for all sides */
+    margin: 20px 20px; /* top/bottom left/right */
+
+    /* A short-hand for margin, 1 value for all sides */
+    margin: 20px; /* top/bottom/left/right */
+
+
+    /**
+     * Border
+     */
+    border-style: outset;
+    border-width: 5px;
+    border-color: tomato;
+
+    /* short-hand for borders */
+    border: 10px outset orange; /* width style color */
+}
+
+
+
+
+/*  */
+.centered-container {
+    background-color: skyblue;
+    /**
+    * Auto - Relative unit
+    * Takes up the whole available width. Height grows with content
+    */
+    /* Auto default value for height/width */
+    /* height: auto; 
+    width: auto; */
+
+    height: 300px;
+    width: 600px;
+
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
+    
+    /* short-hand for centering */
+    margin: 0 auto;
+}
+
+/**
+ * block vs inline vs inline-block
+ */
+
+/**
+ * block
+ * - Alwas takes up the whole width, forcing elements after it to be placed beneth id
+ * - Is effected by properties that manipulates height and width
+ */
+#block1 {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    display: block; /* default value for div */
+}
+
+#block2 {
+    background-color: beige;
+    width: 100px;
+    height: 100px;
+    display: block; /* default value for div */
+}
+
+
+/**
+ * inline
+ * - Doesn't takes up the whole width, allowing other elements after it to be placed beside it
+ * - Is NOT effected by properties that manipulates height and width
+ */
+ #inline1 {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    display: inline; /* default value for span */
+}
+
+#inline2 {
+    background-color: beige;
+    width: 100px;
+    height: 100px;
+    display: inline; /* default value for span */
+}
+
+
+/**
+ * inline-block
+ * - Doesn't takes up the whole width, allowing other elements after it to be placed beside it
+ * - Is effected by properties that manipulates height and width
+ */
+ #inline-block1 {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#inline-block2 {
+    background-color: beige;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+
+/**
+ * Floats on block elements
+ */
+
+.container {
+    width: 300px;
+}
+
+.box1 {
+    background-color: skyblue;
+    opacity: 0.3;  /*values between 0-1*/
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.box2 {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.box3 {
+    background-color: lightgreen;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+img {
+    float: left;
+    margin-right: 20px;
+}
+
+.clearfix {
+    overflow: auto;
+}
